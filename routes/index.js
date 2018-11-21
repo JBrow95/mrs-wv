@@ -6,8 +6,12 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'Express' });
 });
 
-router.get('/new', function(req, res, next) {
-  res.send('Welcome to the page');
+router.get('/other_page', function(req, res, next) {
+  res.render('other_page');
+});
+
+router.post('/this_happens', function(req, res) {
+  res.render('other_page', {text: 'passing information'});
 });
 
 module.exports = router;
