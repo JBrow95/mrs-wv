@@ -8,7 +8,7 @@ var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
-var port = 4567
+var port = 3000
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -39,5 +39,8 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-app.listen(port, () => console.log(`Server running on ${port}`))
+app.listen(port, function() {
+  console.log(`Server is running my man on ${port}`);
+});
+
 module.exports = app;
